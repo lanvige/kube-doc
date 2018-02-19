@@ -75,7 +75,7 @@ Deployment 为 Pod 和 ReplicaSet 提供声明式更新。
 Kubernetes Deployment 提供了官方的用于更新 Pod 和 Replica Set（下一代的Replication Controller）的方法，您可以在 Deployment 对象中只描述您所期望的理想状态（预期的运行状态），Deployment 控制器为您将现在的实际状态转换成您期望的状态，例如，您想将所有的 webapp:v1.0.9 升级成 webapp:v1.1.0，您只需创建一个Deployment，Kubernetes 会按照 Deployment 自动进行升级。现在，您可以通过 Deployment 来创建新的资源（pod，rs，rc），替换已经存在的资源等。
 
 
-下面是Deployment的典型用例：
+下面是 Deployment 的典型用例：
 
 * 使用Deployment来创建ReplicaSet。ReplicaSet在后台创建pod。检查启动状态，看它是成功还是失败。
 * 然后，通过更新Deployment的PodTemplateSpec字段来声明Pod的新状态。这会创建一个新的ReplicaSet，Deployment会按照控制的速率将pod从旧的ReplicaSet移动到新的ReplicaSet中。
@@ -99,7 +99,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.8 # Update the version of nginx from 1.7.9 to 1.8
+        image: nginx:1.8
         ports:
         - containerPort: 80
 ```
