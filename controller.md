@@ -1,4 +1,4 @@
-    # Controller
+# Controller
 
 kube-controller-manager
 Component on the master that runs controllers.
