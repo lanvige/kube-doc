@@ -2,7 +2,7 @@
 
 在 Kubernetes 中，把相关的一个或多个容器构成一个 Pod（容器组），Pod 是 Kubernetes 的基本操作单元，是创建，调度，管理的最小单位。
 
-Pod 包含的容器运行在同一个 Node上，看作一个统一管理单元，共享相同的 Volumes 和Network Namespace / IP 和 Port 空间。
+Pod 包含的容器运行在同一个 Node上，看作一个统一管理单元，共享相同的 Volumes 和 Network Namespace / IP 和 Port 空间。
 
 和运行的容器类似，一个容器组被认为只有很短的运行周期。容器组被调度到一组节点运行，知道容器的生命周期结束或者其被删除。如果节点死掉，运行在其上的容器组将会被删除而不是重新调度。
 
@@ -56,6 +56,7 @@ spec:
     securityContext:
       privileged: true
 ```
+
 
 <br />
 
